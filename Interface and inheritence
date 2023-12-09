@@ -1,0 +1,55 @@
+interface Animals{
+    public void nooflegs(int a);
+    void theyeat();
+    }
+abstract class Herbivorous implements Animals{
+    @Override
+    public void theyeat(){
+        System.out.println("Herbivores eat plants");
+    }
+}
+abstract class Carnivorous implements Animals{
+    @Override
+    public void theyeat(){
+        System.out.println("Carnivores eat flesh");
+    }
+}
+abstract class Omnivorous implements Animals{
+    @Override
+    public void theyeat(){
+        System.out.println("Omnivores eat both plants and flesh");
+    }
+}
+class Elephant extends Herbivorous{
+    @Override
+    public void nooflegs(int a){
+        System.out.println("They have "+a+" legs."+"\n");
+        }
+}
+class Tiger extends Carnivorous{
+    @Override
+    public void nooflegs(int a){
+        System.out.println("They have "+a+" legs."+"\n");
+        }
+   
+} 
+class Bear extends Omnivorous{
+    @Override
+    public void nooflegs(int a){
+        System.out.println("They have "+a+" legs."+"\n");
+        }
+    
+}
+class Main {
+    public static void main(String[] args) {
+        Animals e = new Elephant();
+        e.theyeat();
+        e.nooflegs(4);
+        Animals t = new Tiger();
+        t.theyeat();
+        t.nooflegs(4);
+        Animals b = new Bear();
+        b.theyeat();
+        b.nooflegs(4);
+    }
+}
