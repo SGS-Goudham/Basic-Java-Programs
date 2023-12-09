@@ -1,0 +1,18 @@
+import java.util.Arrays;
+class HelloWorld {
+    public static void main(String[] args) {
+        int a[]={8,7,2,9,5,4,3,5,1};
+        int b[]=new int[a.length];
+        int t=0;
+        int c = 0;
+        Arrays.sort(a);
+        for(int i=0;i<a.length;i++){
+            if(t!=a[i]){
+                b[c]=a[i];
+                t=a[i];
+                c++;
+            }
+        }
+        System.out.println(Arrays.toString(b));
+    }
+}
