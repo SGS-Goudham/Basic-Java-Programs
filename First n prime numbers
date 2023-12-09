@@ -1,0 +1,29 @@
+package prime;
+import java.util.*;
+import java.lang.Math; 
+public class prime {
+	 public static void main(String[]args)
+	    {
+		 	final long startTime = System.currentTimeMillis();
+	        int divisor,n=0,i=2;
+	        Scanner s = new Scanner(System.in);
+	        int x=s.nextInt();
+	        while(n<x){
+	            divisor=1;  
+	            int count=0;  
+	            while(divisor<=(int)(Math.sqrt(i))){ 
+	            	if(i%divisor==0)
+	                	count++;  
+	                divisor++;  
+	            }  
+	            if(count==1){ 
+	                System.out.print(i + " ");  
+	                n++;  
+	            }  
+	            i++;  
+	        }
+	        final long endTime = System.currentTimeMillis();
+
+	        System.out.println("\nTotal execution time: " + (endTime - startTime)/1000.0);
+	    }
+	}
