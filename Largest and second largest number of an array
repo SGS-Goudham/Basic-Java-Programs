@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 5, 6, 8, 8,10,11,9,3};
+        int large = -1;
+        int slarge=-2;
+        for (int i=0;i<a.length;i++) {
+            if (a[i] > large)
+            {
+                slarge = large;
+                large = a[i];
+            }
+            else if (a[i]>slarge){
+                if (a[i] == large) continue;
+                slarge=a[i];
+            }
+            else{
+                continue;
+            }
+        }
+
+        System.out.println(large+"\n"+slarge);
+    }
+}
