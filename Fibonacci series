@@ -1,0 +1,18 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Arrays; 
+class HelloWorld {
+    public static void main(String[] args) {
+        int n=500;
+        int a=0;
+        int b=1;
+        int c=0;
+        while (c<n){
+            System.out.println(a);
+            int x=a+b;
+            a=b;
+            b=x;
+            c++;
+        }
+    }
+}
